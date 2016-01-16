@@ -28,7 +28,7 @@ class BritToUSController extends Controller
 
     public function britToUs(Request $request)
     {
-        $this->validate($request, [ 'source' => 'required']);
+        //$this->validate($request, [ 'source' => 'required']);
 
         Log::info($request->input());
 
