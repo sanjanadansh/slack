@@ -17,14 +17,14 @@ return [
             /*
              * The username to be used when connecting to the server where the logs are located
              */
-            'user' => 'vagrant',
+            'user' => 'forge',
 
             /*
              * The full path to the directory where the .env is located MUST end in /
              */
-            'rootEnvDirectory' => '/home/forge/',
+            'rootEnvDirectory' => '/home/forge/slack.stagingarea.us/',
 
-            'port' => 2222
+            'port' => 22
         ],
     ],
 ];

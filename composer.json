@@ -7,7 +7,9 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "alfred-nutile-inc/env-deployer": "dev-master"
+        "alfred-nutile-inc/env-deployer": "dev-master",
+        "guzzlehttp/guzzle": "^6.1",
+        "fabpot/goutte": "^3.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
