@@ -47,7 +47,7 @@ class BritToUSController extends Controller
 
         $results = $crawler->siblings()->filter('.translation-text')->text();
 
-        return Response::json($results);
+        return Response::json(trim($results));
 
     }
 
@@ -66,7 +66,7 @@ class BritToUSController extends Controller
 
         $results = $crawler->siblings()->filter('.translation-text')->text();
 
-        return Response::json($results);
+        return Response::json(trim($results));
 
     }
 
