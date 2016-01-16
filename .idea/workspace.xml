@@ -25,12 +25,14 @@
     <splitter split-orientation="vertical" split-proportion="0.35367545">
       <split-first>
         <leaf>
-          <file leaf-file-name="payload_b2a.json" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/fixtures/payload_b2a.json">
+          <file leaf-file-name="BritToUSControllerTest.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/BritToUSControllerTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6692913">
-                  <caret line="10" column="16" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="16" />
-                  <folding />
+                <state vertical-scroll-proportion="0.36614174">
+                  <caret line="38" column="56" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="56" />
+                  <folding>
+                    <element signature="e#7#59#0#PHP" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -42,8 +44,8 @@
           <file leaf-file-name="BritToUSController.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BritToUSController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.34334764">
-                  <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+                <state vertical-scroll-proportion="0.62017167">
+                  <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -1053,34 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/fixtures/payload_b2a.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6692913">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/BritToUSControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36480686">
-          <caret line="38" column="56" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="56" />
-          <folding>
-            <marker date="1452957520000" expanded="true" signature="11:246" placeholder="..." />
-            <marker date="1452957520000" expanded="true" signature="293:1524" placeholder="{...}" />
-            <marker date="1452957520000" expanded="true" signature="304:323" placeholder=" @test ..." />
-            <marker date="1452957520000" expanded="true" signature="371:903" placeholder="{...}" />
-            <marker date="1452957520000" expanded="true" signature="670:736" placeholder="..." />
-            <marker date="1452957520000" expanded="true" signature="913:932" placeholder=" @test ..." />
-            <marker date="1452957520000" expanded="true" signature="970:1181" placeholder="{...}" />
-            <marker date="1452957520000" expanded="true" signature="994:1061" placeholder="..." />
-            <marker date="1452957520000" expanded="true" signature="1190:1209" placeholder=" @test ..." />
-            <marker date="1452957520000" expanded="true" signature="1247:1522" placeholder="{...}" />
-            <marker date="1452957520000" expanded="true" signature="1271:1338" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Validation/ValidatesRequests.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33476394">
@@ -1194,10 +1168,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/fixtures/payload_b2a.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6023622">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding>
+            <marker date="1452970156000" expanded="true" signature="0:403" placeholder="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/BritToUSControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36614174">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="56" />
+          <folding>
+            <element signature="e#7#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BritToUSController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34334764">
-          <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.62017167">
+          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
           <folding />
         </state>
       </provider>

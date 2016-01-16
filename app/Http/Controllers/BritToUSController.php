@@ -60,7 +60,9 @@ class BritToUSController extends Controller
                 ]
             ];
 
-        $this->guzzle->post($request->input('response_url'), $response);
+        //$this->guzzle->post($request->input('response_url'), $response);
+
+        return Response::json($results);
 
     }
 
