@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -20,15 +21,23 @@ class BritToUSController extends Controller
      */
     protected $client;
 
-    public function __construct(GoutteClient $client)
+    /**
+     * @var Client
+     */
+    protected $guzzle;
+
+    public function __construct(GoutteClient $client, Client $guzzle)
     {
         $this->client = $client;
+        $this->guzzle = $guzzle;
     }
 
 
     public function britToUs(Request $request)
     {
-        //$this->validate($request, [ 'source' => 'required']);
+        $this->validate($request, [ 'token' => 'required']);
+
+        //$request->input('command') must be /b2a
 
         Log::info($request->input());
 
@@ -37,12 +46,18 @@ class BritToUSController extends Controller
         $form    = $crawler->siblings()->filterXPath('//*[@id="content-area"]/div/div[1]/div[1]/div[1]/div[1]/form')->form();
 
         $crawler    = $this->client->submit($form,
-            array('p' => $request->input('source')));
+            array('p' => $request->input('text')));
 
         $results = $crawler->siblings()->filter('.translation-text')->text();
 
+        $response = [
+            "text" => $results,
+            "attachments" => [
+                "text" => "Partly cloudy today and tomorrow"
+            ]
+        ];
 
-        return Response::json(['data' => $results], 200);
+        $this->guzzle->post($request->input('response_url'), $response);
 
     }
 
