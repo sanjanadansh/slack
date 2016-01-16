@@ -32,12 +32,28 @@ class BritToUSController extends Controller
         $this->guzzle = $guzzle;
     }
 
+    public function usToBrit(Request $request)
+    {
+        $this->validate($request, [ 'token' => 'required']);
+
+        Log::info($request->input());
+
+        $crawler = $this->client->request('GET', $this->url . 'reverse.php');
+
+        $form    = $crawler->siblings()->filterXPath('//*[@id="content-area"]/div/div[1]/div[1]/div[1]/div[1]/form')->form();
+
+        $crawler    = $this->client->submit($form,
+            array('p' => $request->input('text')));
+
+        $results = $crawler->siblings()->filter('.translation-text')->text();
+
+        return Response::json($results);
+
+    }
 
     public function britToUs(Request $request)
     {
         $this->validate($request, [ 'token' => 'required']);
-
-        //$request->input('command') must be /b2a
 
         Log::info($request->input());
 
@@ -49,18 +65,6 @@ class BritToUSController extends Controller
             array('p' => $request->input('text')));
 
         $results = $crawler->siblings()->filter('.translation-text')->text();
-
-        $response = [
-            "headers" => [
-                "Content-Type" => "application/json"
-            ],
-            "text" => $results,
-            "attachments" => [
-                "text" => "Partly cloudy today and tomorrow"
-                ]
-            ];
-
-        //$this->guzzle->post($request->input('response_url'), $response);
 
         return Response::json($results);
 
