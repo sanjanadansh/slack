@@ -47,7 +47,7 @@ class BritToUSController extends Controller
 
         $results = $crawler->siblings()->filter('.translation-text')->text();
 
-        return Response::json(['response_type' => 'in_channel', 'text' => trim($results), 'attachments' => ['text' => $request->input('text')]]);
+        return Response::json($this->respondToSlack($results, $request->input('text'), 'in_channel'));
 
     }
 
@@ -66,8 +66,13 @@ class BritToUSController extends Controller
 
         $results = $crawler->siblings()->filter('.translation-text')->text();
 
-        return Response::json(trim($results));
+        return Response::json($this->respondToSlack($results, $request->input('text'), 'in_channel'));
 
+    }
+
+    protected function respondToSlack($message, $original_message, $type = 'in_channel')
+    {
+        return ['response_type' => 'in_channel', 'text' => trim($message), 'attachments' => ['text' => $original_message]];
     }
 
     /**
