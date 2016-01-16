@@ -47,7 +47,7 @@ class BritToUSController extends Controller
 
         $results = $crawler->siblings()->filter('.translation-text')->text();
 
-        return Response::json(['text' => trim($results)]);
+        return Response::json(['text' => trim($results), ['attachments' => ['text' => $request->input('text')]]]);
 
     }
 
