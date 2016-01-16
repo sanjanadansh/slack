@@ -28,7 +28,7 @@ class BritToUSControllerTest extends TestCase
 
         $this->assertEquals("you idiotic guy american in a hurry ", $results);
     }
-    
+
 
     /**
      * @test
@@ -41,7 +41,19 @@ class BritToUSControllerTest extends TestCase
 
        $this->post("/api/v1/brit_to_us", $post)->seeJson(['data' => 'you idiotic guy american in a hurry ']);
 
+    }
 
+    /**
+     * @test
+     */
+    public function test_prod_api()
+    {
+        $post = [
+            'source' => "ye barmy bloke yank in a chivvy"
+        ];
 
+        $this->post("https://slack.stagingarea.us/api/v1/brit_to_us", $post)->seeJson(['data' => 'you idiotic guy american in a hurry ']);
+
+        $this->assertResponseOk();
     }
 }

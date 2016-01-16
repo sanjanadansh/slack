@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Goutte\Client as GoutteClient;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Response;
 
 class BritToUSController extends Controller
@@ -28,6 +29,8 @@ class BritToUSController extends Controller
     public function britToUs(Request $request)
     {
         $this->validate($request, [ 'source' => 'required']);
+
+        Log::info($request->input());
 
         $crawler = $this->client->request('GET', $this->url);
 
