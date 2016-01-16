@@ -51,11 +51,14 @@ class BritToUSController extends Controller
         $results = $crawler->siblings()->filter('.translation-text')->text();
 
         $response = [
+            "headers" => [
+                "Content-Type" => "application/json"
+            ],
             "text" => $results,
             "attachments" => [
                 "text" => "Partly cloudy today and tomorrow"
-            ]
-        ];
+                ]
+            ];
 
         $this->guzzle->post($request->input('response_url'), $response);
 
