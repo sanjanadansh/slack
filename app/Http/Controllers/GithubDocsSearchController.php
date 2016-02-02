@@ -39,7 +39,7 @@ class GithubDocsSearchController extends Controller
 
     public function respondToSlack($message, $found, $type = 'in_channel')
     {
-        return ['response_type' => $type, 'text' => $message, 'attachments' => ['text' =>  $found ] ];
+        return ['response_type' => $type, 'text' => $message, 'attachments' => [ ['text' =>  $found, "foo" => "Bar"] ] ];
     }
 
     protected function transform($results)
