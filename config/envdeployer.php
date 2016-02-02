@@ -12,7 +12,7 @@ return [
             /*
              * The hostname to send the env file to
              */
-            'host'  => '104.131.36.26',
+            'host'  => 'slack.stagingarea.us',
 
             /*
              * The username to be used when connecting to the server where the logs are located

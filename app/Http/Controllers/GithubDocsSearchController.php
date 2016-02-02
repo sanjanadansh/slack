@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Response;
 
 class GithubDocsSearchController extends Controller
@@ -17,12 +18,16 @@ class GithubDocsSearchController extends Controller
         {
             $search     = $request->input('source');
 
-            $results    = GitHub::search()->code(sprintf("%s repo:alfred-nutile-inc/internal_practices extension:md", $search));
+            $repo       = env('GITHUB_REPO');
+
+            $results    = GitHub::search()->code(sprintf("%s repo:%s extension:md", $search, $repo));
 
             $found      = implode("\n", $this->transform($results));
 
             $message    = sprintf("Your original search %s total found %d", $search, $results['total_count']);
 
+            Log::info(sprintf("%s", $message));
+            
             return Response::json($this->respondToSlack($message, $found, 'in_channel'));
         }
         catch(\Exception $e)
