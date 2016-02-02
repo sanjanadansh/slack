@@ -16,7 +16,7 @@ class GithubDocsSearchController extends Controller
     {
         try
         {
-            $search     = $request->input('source');
+            $search     = $request->input('text');
 
             $repo       = env('GITHUB_REPO');
 
@@ -27,7 +27,7 @@ class GithubDocsSearchController extends Controller
             $message    = sprintf("Your original search %s total found %d", $search, $results['total_count']);
 
             Log::info(sprintf("%s", $message));
-            
+
             return Response::json($this->respondToSlack($message, $found, 'in_channel'));
         }
         catch(\Exception $e)
