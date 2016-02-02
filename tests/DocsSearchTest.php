@@ -19,7 +19,7 @@ class DocsSearchTest extends TestCase
          * @TODO setup Cache https://github.com/KnpLabs/php-github-api#cache-usage
          */
 
-        $post = ['source' => 'Behat'];
+        $post = ['text' => 'Behat ephemeral'];
         $results = $this->call('POST', '/api/v1/internal_docs', $post);
 
         $this->assertResponseOk();
