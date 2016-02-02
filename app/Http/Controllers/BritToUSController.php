@@ -34,46 +34,47 @@ class BritToUSController extends Controller
 
     public function usToBrit(Request $request)
     {
-        $this->validate($request, [ 'token' => 'required']);
+        try {
+    
+            Log::info($request->input());
 
-        Log::info($request->input());
+            $crawler = $this->client->request('GET', $this->url . 'reverse.php');
 
-        $crawler = $this->client->request('GET', $this->url . 'reverse.php');
+            $form = $crawler->siblings()->filterXPath('//*[@id="content-area"]/div/div[1]/div[1]/div[1]/div[1]/form')->form();
 
-        $form    = $crawler->siblings()->filterXPath('//*[@id="content-area"]/div/div[1]/div[1]/div[1]/div[1]/form')->form();
+            $crawler = $this->client->submit($form,
+                array('p' => $request->input('text')));
 
-        $crawler    = $this->client->submit($form,
-            array('p' => $request->input('text')));
+            $results = $crawler->siblings()->filter('.translation-text')->text();
 
-        $results = $crawler->siblings()->filter('.translation-text')->text();
-
-        return Response::json($this->respondToSlack($results, $request->input('text'), 'in_channel'));
-
+            return Response::json($this->respondToSlack($results, $request->input('text'), 'in_channel'));
+        } catch (\Exception $e) {
+            return Response::json($this->respondToSlack(sprintf("Error %s", $e->getMessage()), $request->input('text'), 'in_channel'), 400);
+        }
     }
 
     public function britToUs(Request $request)
     {
-        $this->validate($request, [ 'token' => 'required']);
 
-        Log::info($request->input());
+        try {
+            Log::info($request->input());
 
-        $crawler = $this->client->request('GET', $this->url);
+            $crawler = $this->client->request('GET', $this->url);
 
-        $form    = $crawler->siblings()->filterXPath('//*[@id="content-area"]/div/div[1]/div[1]/div[1]/div[1]/form')->form();
+            $form = $crawler->siblings()->filterXPath('//*[@id="content-area"]/div/div[1]/div[1]/div[1]/div[1]/form')->form();
 
-        $crawler    = $this->client->submit($form,
-            array('p' => $request->input('text')));
+            $crawler = $this->client->submit($form,
+                array('p' => $request->input('text')));
 
-        $results = $crawler->siblings()->filter('.translation-text')->text();
+            $results = $crawler->siblings()->filter('.translation-text')->text();
 
-        return Response::json($this->respondToSlack($results, $request->input('text'), 'in_channel'));
+            return Response::json($this->respondToSlack($results, $request->input('text'), 'in_channel'));
+        } catch (\Exception $e) {
+            return Response::json($this->respondToSlack(sprintf("Error %s", $e->getMessage()), $request->input('text'), 'in_channel'), 400);
+        }
 
     }
 
-    protected function respondToSlack($message, $original_message, $type = 'in_channel')
-    {
-        return ['response_type' => 'in_channel', 'text' => trim($message), 'attachments' => ['text' => $original_message]];
-    }
 
     /**
      * @return string

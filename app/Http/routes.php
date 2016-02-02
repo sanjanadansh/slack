@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 Route::post('/api/v1/brit_to_us', 'BritToUSController@britToUs');
+
 Route::post('/api/v1/us_to_brit', 'BritToUSController@usToBrit');
 
-
+Route::post('/api/v1/internal_docs', 'GithubDocsSearchController@search');
 
