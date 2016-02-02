@@ -70,10 +70,6 @@ class BritToUSController extends Controller
 
     }
 
-    protected function respondToSlack($message, $original_message, $type = 'in_channel')
-    {
-        return ['response_type' => 'in_channel', 'text' => trim($message), 'attachments' => ['text' => $original_message]];
-    }
 
     /**
      * @return string
