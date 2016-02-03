@@ -35,7 +35,7 @@ class BritToUSController extends Controller
     public function usToBrit(Request $request)
     {
         try {
-    
+
             Log::info($request->input());
 
             $crawler = $this->client->request('GET', $this->url . 'reverse.php');

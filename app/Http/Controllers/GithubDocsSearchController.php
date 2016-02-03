@@ -50,7 +50,6 @@ class GithubDocsSearchController extends Controller
         {
             $file_name  = $item['name'];
             $file_path  = $item['html_url'];
-            $score      = number_format($item['score'], 2);
             $result     = sprintf("File: %s Path: %s", $file_name, $file_path);
             $output[] = $result;
         }

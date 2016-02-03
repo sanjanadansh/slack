@@ -4,7 +4,7 @@
     <list default="true" id="fdf769dd-3c71-43f3-8995-2709b4fd6eb6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/BritToUSController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BritToUSController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/GithubDocsSearchController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/GithubDocsSearchController.php" />
     </list>
     <ignored path="slack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,13 +26,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BritToUSController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BritToUSController.php">
+      <file leaf-file-name="DocsSearchTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/DocsSearchTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10402219">
-              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.58945906">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
-                <element signature="e#40#62#0#PHP" expanded="true" />
+                <element signature="e#7#48#0#PHP" expanded="true" />
+                <marker date="1454390434000" expanded="true" signature="603:627" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -55,9 +56,9 @@
         <option value="$PROJECT_DIR$/tests/DocsSearchTest.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/envdeployer.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/GithubDocsSearchController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BritToUSController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/GithubDocsSearchController.php" />
       </list>
     </option>
   </component>
@@ -205,8 +206,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,14 +257,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1260" height="743" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.49514562" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -274,6 +274,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -286,6 +287,17 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tests/DocsSearchTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#48#0#PHP" expanded="true" />
+            <marker date="1454390434000" expanded="true" signature="603:627" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -303,7 +315,23 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
+            <marker date="1454395857000" expanded="true" signature="44:264" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="309:2478" placeholder="{...}" />
+            <marker date="1454395857000" expanded="true" signature="378:409" placeholder=" @var GoutteClient ..." />
+            <marker date="1454395857000" expanded="true" signature="443:468" placeholder=" @var Client ..." />
+            <marker date="1454395857000" expanded="true" signature="564:642" placeholder="{...}" />
+            <marker date="1454395857000" expanded="true" signature="690:1455" placeholder="{...}" />
+            <marker date="1454395857000" expanded="true" signature="710:1273" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="1011:1071" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="1298:1448" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="1503:2253" placeholder="{...}" />
+            <marker date="1454395857000" expanded="true" signature="1524:2070" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="1808:1868" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="2095:2245" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="2263:2291" placeholder=" @return string ..." />
+            <marker date="1454395857000" expanded="true" signature="2322:2361" placeholder="{...}" />
+            <marker date="1454395857000" expanded="true" signature="2370:2402" placeholder=" @param string $url ..." />
+            <marker date="1454395857000" expanded="true" signature="2437:2476" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -2306,21 +2334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/DocsSearchTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24444444">
-          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-          <folding>
-            <marker date="1454390434000" expanded="true" signature="11:211" placeholder="..." />
-            <marker date="1454390434000" expanded="true" signature="250:737" placeholder="{...}" />
-            <marker date="1454390434000" expanded="true" signature="260:279" placeholder=" @test ..." />
-            <marker date="1454390434000" expanded="true" signature="318:735" placeholder="{...}" />
-            <marker date="1454390434000" expanded="true" signature="336:520" placeholder=" Take incoming request ..." />
-            <marker date="1454390434000" expanded="true" signature="603:627" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_3.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7583333">
@@ -2382,35 +2395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33009708">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <marker date="1454393602000" expanded="false" signature="9:383" placeholder="..." />
-            <marker date="1454393602000" expanded="true" signature="398:446" placeholder="..." />
-            <marker date="1454393602000" expanded="true" signature="416:445" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GithubDocsSearchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54230237">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-          <folding>
-            <marker date="1454393333000" expanded="true" signature="44:248" placeholder="..." />
-            <marker date="1454393333000" expanded="true" signature="301:1685" placeholder="{...}" />
-            <marker date="1454393333000" expanded="true" signature="348:1067" placeholder="{...}" />
-            <marker date="1454393333000" expanded="true" signature="366:909" placeholder="{...}" />
-            <marker date="1454393333000" expanded="true" signature="938:1060" placeholder="{...}" />
-            <marker date="1454393333000" expanded="true" signature="1143:1255" placeholder="{...}" />
-            <marker date="1454393333000" expanded="true" signature="1299:1682" placeholder="{...}" />
-            <marker date="1454393333000" expanded="true" signature="1372:1651" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/BritToUSControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3633842">
@@ -2431,12 +2415,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33009708">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1454393602000" expanded="false" signature="9:383" placeholder="..." />
+            <marker date="1454393602000" expanded="true" signature="398:446" placeholder="..." />
+            <marker date="1454393602000" expanded="true" signature="416:445" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BritToUSController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10402219">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.023578363">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="28" />
           <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
+            <marker date="1454395857000" expanded="true" signature="44:264" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="309:2478" placeholder="{...}" />
+            <marker date="1454395857000" expanded="true" signature="378:409" placeholder=" @var GoutteClient ..." />
+            <marker date="1454395857000" expanded="true" signature="443:468" placeholder=" @var Client ..." />
+            <marker date="1454395857000" expanded="true" signature="564:642" placeholder="{...}" />
+            <marker date="1454395857000" expanded="true" signature="690:1455" placeholder="{...}" />
+            <marker date="1454395857000" expanded="true" signature="710:1273" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="1011:1071" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="1298:1448" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="1503:2253" placeholder="{...}" />
+            <marker date="1454395857000" expanded="true" signature="1524:2070" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="1808:1868" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="2095:2245" placeholder="..." />
+            <marker date="1454395857000" expanded="true" signature="2263:2291" placeholder=" @return string ..." />
+            <marker date="1454395857000" expanded="true" signature="2322:2361" placeholder="{...}" />
+            <marker date="1454395857000" expanded="true" signature="2370:2402" placeholder=" @param string $url ..." />
+            <marker date="1454395857000" expanded="true" signature="2437:2476" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GithubDocsSearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22191401">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <marker date="1454396448000" expanded="true" signature="44:248" placeholder="..." />
+            <marker date="1454396448000" expanded="true" signature="301:1625" placeholder="{...}" />
+            <marker date="1454396448000" expanded="true" signature="348:1067" placeholder="{...}" />
+            <marker date="1454396448000" expanded="true" signature="366:909" placeholder="{...}" />
+            <marker date="1454396448000" expanded="true" signature="938:1060" placeholder="{...}" />
+            <marker date="1454396448000" expanded="true" signature="1143:1255" placeholder="{...}" />
+            <marker date="1454396448000" expanded="true" signature="1299:1622" placeholder="{...}" />
+            <marker date="1454396448000" expanded="true" signature="1372:1591" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/DocsSearchTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58945906">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#48#0#PHP" expanded="true" />
+            <marker date="1454390434000" expanded="true" signature="603:627" placeholder="..." />
           </folding>
         </state>
       </provider>
