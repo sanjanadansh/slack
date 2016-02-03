@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\SlackTrait;
 use GrahamCampbell\GitHub\Facades\GitHub;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ use Illuminate\Support\Facades\Response;
 
 class GithubDocsSearchController extends Controller
 {
-    protected $message_type = 'in_channel';
+    use SlackTrait;
+
 
     public function search(Request $request)
     {
@@ -44,7 +46,7 @@ class GithubDocsSearchController extends Controller
 
     public function respondToSlack($message, $found, $type = 'in_channel')
     {
-        return ['response_type' => $type, 'text' => $message, 'attachments' => [ ['text' =>  $found, "foo" => "Bar"] ] ];
+        return ['response_type' => $type, 'text' => $message, 'attachments' => [ ['text' =>  $found ] ] ];
     }
 
     protected function transform($results)
@@ -62,21 +64,6 @@ class GithubDocsSearchController extends Controller
         return $output;
     }
 
-    private function seeIfEphemeral($search)
-    {
-        if($pos = strpos($search, 'ephemeral'))
-        {
-            $search = str_replace('ephemeral', '', $search);
-            $this->message_type = 'ephemeral';
-        }
 
-
-        return $search;
-    }
-
-    public function getMessageType()
-    {
-        return $this->message_type;
-    }
 
 }
