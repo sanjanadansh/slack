@@ -12,11 +12,15 @@ use Illuminate\Support\Facades\Response;
 
 class GithubDocsSearchController extends Controller
 {
+    protected $message_type = 'in_channel';
+
     public function search(Request $request)
     {
         try
         {
             $search     = $request->input('text');
+
+            $search     = $this->seeIfEphemeral($search);
 
             $repo       = env('GITHUB_REPO');
 
@@ -28,7 +32,8 @@ class GithubDocsSearchController extends Controller
 
             Log::info(sprintf("%s", $message));
 
-            return Response::json($this->respondToSlack($message, $found, 'in_channel'));
+
+            return Response::json($this->respondToSlack($message, $found, $this->getMessageType()));
         }
         catch(\Exception $e)
         {
@@ -39,7 +44,7 @@ class GithubDocsSearchController extends Controller
 
     public function respondToSlack($message, $found, $type = 'in_channel')
     {
-        return ['response_type' => $type, 'text' => $message, 'attachments' => ['text' => $found]];
+        return ['response_type' => $type, 'text' => $message, 'attachments' => [ ['text' =>  $found, "foo" => "Bar"] ] ];
     }
 
     protected function transform($results)
@@ -55,6 +60,23 @@ class GithubDocsSearchController extends Controller
         }
 
         return $output;
+    }
+
+    private function seeIfEphemeral($search)
+    {
+        if($pos = strpos($search, 'ephemeral'))
+        {
+            $search = str_replace('ephemeral', '', $search);
+            $this->message_type = 'ephemeral';
+        }
+
+
+        return $search;
+    }
+
+    public function getMessageType()
+    {
+        return $this->message_type;
     }
 
 }
