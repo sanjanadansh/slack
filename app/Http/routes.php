@@ -22,3 +22,5 @@ Route::post('/api/v1/us_to_brit', 'BritToUSController@usToBrit');
 Route::post('/api/v1/internal_docs', 'GithubDocsSearchController@search');
 
 Route::post('/api/v1/jira', 'JiraController@webhook');
+
+Route::post('/api/v1/aha', 'AHAController@webhook');
