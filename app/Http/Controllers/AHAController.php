@@ -36,9 +36,10 @@ class AHAController extends Controller
 
         try
         {
-            
+
 
             Log::info("Message Incoming from AHA");
+            Log::info($request->input());
         }
         catch(\Exception $e)
         {
