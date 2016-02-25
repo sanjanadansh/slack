@@ -48,6 +48,8 @@ class SendSlackNotice
     {
         if(!$this->slack_url)
             return env('SLACK_URL');
+
+        return $this->slack_url;
     }
 
     /**
@@ -56,5 +58,6 @@ class SendSlackNotice
     public function setSlackUrl($slack_url)
     {
         $this->slack_url = $slack_url;
+        return $this;
     }
 }

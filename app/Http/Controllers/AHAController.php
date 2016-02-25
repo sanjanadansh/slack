@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\AHAPayload;
 use App\JiraPayload;
 use App\SendSlackNotice;
 use App\SlackTrait;
@@ -17,18 +18,21 @@ class AHAController extends Controller
     use SlackTrait;
 
     /**
-     * @var \App\JiraPayload
-     */
-    private $jiraPayload;
-    /**
      * @var \App\SendSlackNotice
      */
     private $sendToSlack;
 
-    public function __construct(JiraPayload $jiraPayload, SendSlackNotice $sendToSlack)
+    protected $slack_url = 'https://hooks.slack.com/services/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';
+
+    /**
+     * @var AHAPayload
+     */
+    private $AHAPayload;
+
+    public function __construct(AHAPayload $AHAPayload, SendSlackNotice $sendToSlack)
     {
-        $this->jiraPayload = $jiraPayload;
         $this->sendToSlack = $sendToSlack;
+        $this->AHAPayload = $AHAPayload;
     }
 
 
@@ -39,8 +43,13 @@ class AHAController extends Controller
         {
             $payload = $request->input();
 
-            //File::put('/tmp/payload.json', json_encode($payload, JSON_PRETTY_PRINT));
+            $this->AHAPayload->setPayload($payload);
 
+            $message = $this->AHAPayload->makeSlackMessage();
+
+            $this->sendToSlack->setSlackUrl($this->slack_url)->sendMessageToSlack($message);
+
+            //File::put('/tmp/payload.json', json_encode($payload, JSON_PRETTY_PRINT));
             Log::info("Message Incoming from AHA");
 
         }
