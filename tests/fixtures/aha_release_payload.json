@@ -1,0 +1,36 @@
+{
+  "event": "create_release",
+  "release": {
+    "id": "6254843319072308710",
+    "product_id": "6254842763042287776",
+    "reference_num": "ALTEST-R-2",
+    "name": "Test Release",
+    "start_date": "2016-03-16",
+    "release_date": "2016-03-30",
+    "released": false,
+    "parking_lot": false,
+    "created_at": "2016-02-24T13:06:35Z",
+    "updated_at": "2016-02-25T20:28:49Z",
+    "theme": {
+      "id": "6254843319085419939",
+      "body": "",
+      "created_at": "2016-02-24T13:06:35Z",
+      "attachments": []
+    },
+    "url": "https:\/\/det.aha.io:443\/releases\/ALTEST-R-2",
+    "resource": "https:\/\/det.aha.io:443\/api\/v1\/releases\/ALTEST-R-2",
+    "integration_fields": [],
+    "custom_fields": [],
+    "comments_count": 0,
+    "workflow_status": {
+      "id": "6013053284264084983",
+      "name": "Under consideration"
+    },
+    "owner": {
+      "id": "6254275943377603544",
+      "name": "Al Nutile",
+      "email": "alfrednutile@gmail.com",
+      "created_at": "2016-02-23T00:24:53Z"
+    }
+  }
+}
