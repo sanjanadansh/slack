@@ -69,11 +69,11 @@ class AHAPayload
         switch($this->getEvent()) {
             case "create_release":
                 $this->setType('release');
-                $message = sprintf("Example Incoming Release from AHA: Created by %s, URL %s, Owner to %s Status %s",
-                    $this->getCreatedBy(), $this->getUrl(), $this->getAssignedTo(), $this->getWorkflowStatus());
+                $message = sprintf("Example Incoming Release from AHA: URL %s, Owner to %s, Status %s",
+                    $this->getUrl(), $this->getAssignedTo(), $this->getWorkflowStatus());
                 break;
             case "create_feature":
-                $message = sprintf("Example Incoming Feature from AHA: Created by %s, URL %s, Assigned to %s Status %s",
+                $message = sprintf("Example Incoming Feature from AHA: Created by %s, URL %s, Assigned to %s, Status %s",
                     $this->getCreatedBy(), $this->getUrl(), $this->getAssignedTo(), $this->getWorkflowStatus());
                 break;
             default:
