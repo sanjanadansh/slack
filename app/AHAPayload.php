@@ -59,8 +59,11 @@ class AHAPayload
     public function makeSlackMessage()
     {
 
-        return sprintf("Example Incoming from AHA: Created by %s, Type %s, Assigned to %s",
+
+
+        $message = sprintf("Example Incoming from AHA: Created by %s, Type %s, Assigned to %s",
             $this->getCreatedBy(), $this->getEvent(), $this->getAssignedTo());
 
+        return $message;
     }
 }

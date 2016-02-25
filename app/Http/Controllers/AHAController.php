@@ -43,15 +43,16 @@ class AHAController extends Controller
         {
             $payload = $request->input();
 
+            //File::put('/tmp/payload.json', json_encode($payload, JSON_PRETTY_PRINT));
+            Log::info("Message Incoming from AHA");
+            Log::info($payload);
+            
             $this->AHAPayload->setPayload($payload);
 
             $message = $this->AHAPayload->makeSlackMessage();
 
             $this->sendToSlack->setSlackUrl($this->slack_url)->sendMessageToSlack($message);
 
-            //File::put('/tmp/payload.json', json_encode($payload, JSON_PRETTY_PRINT));
-            Log::info("Message Incoming from AHA");
-            Log::info($payload);
 
         }
         catch(\Exception $e)
