@@ -21,8 +21,9 @@ class AHAControllerTest extends TestCase
         $payload_model->setPayload($payload);
 
         $this->assertEquals('Ani Gupta', $payload_model->getCreatedBy());
+        $this->assertEquals('What does Aha metadata look like', $payload_model->getFeatureName());
 
 
-        $this->post('/api/v1/aha', $payload);
+        //$this->post('/api/v1/aha', $payload);
     }
 }

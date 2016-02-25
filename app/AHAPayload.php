@@ -60,7 +60,7 @@ class AHAPayload
     {
 
         return sprintf("Example Incoming from AHA: Created by %s, Link back %s, Type %s, Assigned to %s",
-            $this->getCreatedBy(), $this->getFeatureURL(), $this->getFeatureName(), $this->getAssignedTo());
+            $this->getCreatedBy(), $this->getFeatureURL(), $this->getEvent(), $this->getAssignedTo());
 
     }
 }
