@@ -8,6 +8,7 @@ use App\SlackTrait;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 
 class AHAController extends Controller
@@ -36,10 +37,12 @@ class AHAController extends Controller
 
         try
         {
+            $payload = $request->input();
 
-            //Disabled for security reasons turn on only when needed
-            //Log::info("Message Incoming from AHA");
-            Log::info($request->input());
+            File::put('/tmp/payload.json', $payload);
+
+            Log::info("Message Incoming from AHA");
+
         }
         catch(\Exception $e)
         {
