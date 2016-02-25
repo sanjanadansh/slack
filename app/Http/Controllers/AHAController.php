@@ -51,6 +51,7 @@ class AHAController extends Controller
 
             //File::put('/tmp/payload.json', json_encode($payload, JSON_PRETTY_PRINT));
             Log::info("Message Incoming from AHA");
+            Log::info($payload);
 
         }
         catch(\Exception $e)
