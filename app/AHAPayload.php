@@ -70,7 +70,7 @@ class AHAPayload
             case "create_release":
                 $this->setType('release');
                 $message = sprintf("Example Incoming Release from AHA: URL %s, Owner to %s, Status %s",
-                    $this->getUrl(), $this->getAssignedTo(), $this->getWorkflowStatus());
+                    $this->getUrl(), $this->getOwner(), $this->getWorkflowStatus());
                 break;
             case "create_feature":
                 $message = sprintf("Example Incoming Feature from AHA: Created by %s, URL %s, Assigned to %s, Status %s",
