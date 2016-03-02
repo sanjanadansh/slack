@@ -24,3 +24,5 @@ Route::post('/api/v1/internal_docs', 'GithubDocsSearchController@search');
 Route::post('/api/v1/jira', 'JiraController@webhook');
 
 Route::post('/api/v1/aha', 'AHAController@webhook');
+
+Route::post('/api/v1/drown', 'DrownController@search');
