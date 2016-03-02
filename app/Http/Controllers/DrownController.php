@@ -26,7 +26,7 @@ class DrownController extends Controller
 
             $test_outputs = [];
 
-            $command = sprintf("python /opt/public_drown_scanner/scanner.py %s 443", $site);
+            $command = sprintf("cd /opt/public_drown_scanner/ && python scanner.py %s 443", $site);
 
             exec($command, $test_outputs, $results);
 
