@@ -20,6 +20,8 @@ class DrownController extends Controller
     {
         try
         {
+            $output   = [];
+
             $site     = $request->input('text');
 
             $site     = $this->seeIfEphemeral($site);
@@ -30,9 +32,15 @@ class DrownController extends Controller
 
             exec($command, $test_outputs, $results);
 
-            $output = implode("\n", $test_outputs);
+            $output[] = implode("\n", $test_outputs);
 
-            return Response::json($this->respondToSlack("Results Below", $output, $this->getMessageType()));
+            $command = "cd /opt/tlsfuzzer && PYTHONPATH=. python scripts/test-sslv2-force-export-cipher.py -h alfrednutile.info -p 443";
+
+            exec($command, $test_outputs, $results);
+
+            $output[] = implode("\n", $test_outputs);
+
+            return Response::json($this->respondToSlack("Results Below", implode("\n", $output), $this->getMessageType()));
         }
         catch(\Exception $e)
         {
