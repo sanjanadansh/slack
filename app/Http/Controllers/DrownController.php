@@ -30,13 +30,9 @@ class DrownController extends Controller
 
             exec($command, $test_outputs, $results);
 
-            Log::info("Drown Results", $test_outputs);
+            $output = implode("\n", $test_outputs);
 
-            $output = implode(", ", $test_outputs);
-
-            $message    = sprintf("The Results of your scan %s", $output);
-
-            return Response::json($this->respondToSlack($message, $message, $this->getMessageType()));
+            return Response::json($this->respondToSlack("Results Below", $output, $this->getMessageType()));
         }
         catch(\Exception $e)
         {
