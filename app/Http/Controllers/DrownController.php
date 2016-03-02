@@ -32,7 +32,7 @@ class DrownController extends Controller
 
             $output = implode(", ", $test_outputs);
 
-            $message    = sprintf("The Results of your scan", $output);
+            $message    = sprintf("The Results of your scan %s", $output);
 
             return Response::json($this->respondToSlack($message, $message, $this->getMessageType()));
         }
